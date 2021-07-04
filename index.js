@@ -4,6 +4,10 @@ const home = require("./routes/home");
 const app = express();
 
 app.use(express.json());
+// app.use((req, res, next) => {
+//   console.log("Logging.......!");
+//   next();
+// }); Example of a Custom Middleware Function.
 app.use("/api/generas", generas);
 app.use("/", home);
 
